@@ -1,0 +1,121 @@
+/* CSS Document */
+body {
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px;
+  color: #00231C;
+  background-color: #FCFCFC;
+  margin: 0;
+  padding: 20px; 
+}
+
+/* HEADER */
+header {
+  background-color: #FCFCFC;
+}
+
+header h1 {
+  font-family: Arial;
+  font-size: 30px;
+}
+
+/* NAVIGATION */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2343BD;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HEADINGS */
+h2 {
+  font-family: Arial;
+  font-size: 25px;
+}
+
+h3 {
+  font-family: Arial;
+  font-size: 25px;
+}
+
+/* PARAGRAPHS */
+p {
+  line-height: 1.5;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+}
+
+/* TABLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  padding: 10px;
+  background-color: #91B9D2;
+}
+
+/* ✅ FIX: Footer alignment override */
+footer td {
+  text-align: left;
+}
+
+/* BUTTONS */
+button {
+  background-color: #2343BD;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+}
+
+button:hover {
+  background-color: #17253F;
+}
+
+/* FORMS */
+form {
+  margin-top: 10px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 200px;
+}
+
+input[type="submit"] {
+  width: auto;
+  padding: 5px 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #FCFCFC;
+  padding: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #ccc; /* ✅ optional but helpful */
+}
+
+footer p {
+  font-size: 14px;
+}

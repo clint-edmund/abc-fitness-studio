@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>ABC Fitness Studio - About Us / Contact</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="font-family: Calibri, Arial, sans-serif; font-size:16px; color:#00231C; background-color:#FCFCFC;">
+<body>
 
   <!-- HEADER -->
   <header>
@@ -14,16 +15,12 @@
         <td width="20%">
           <img src="images/logo.png" width="80" alt="ABC Fitness Studio Logo">
         </td>
+
         <td width="80%">
-          <h1 style="margin:0; font-family: Arial; font-size:30px;">
-            <strong>ABC FITNESS STUDIO</strong>
-          </h1>
+          <h1><strong>ABC FITNESS STUDIO</strong></h1>
+          <p>Move. Connect. Community.</p>
 
-          <p style="font-family: Comfortaa; font-size:15px; margin:0;">
-            Move. Connect. Community.
-          </p>
-
-          <nav style="margin-top:10px;">
+          <nav>
             <a href="index.html">Home</a> |
             <a href="classes.html">Classes</a> |
             <a href="classes.html#schedule">Schedule</a> |
@@ -47,9 +44,7 @@
         <tr>
 
           <td width="60%" valign="top">
-            <h2 style="font-family: Arial; font-size:25px;">
-              <strong>About ABC Fitness Studio</strong>
-            </h2>
+            <h2><strong>About ABC Fitness Studio</strong></h2>
 
             <p>
               ABC Fitness Studio is dedicated to promoting health, wellness, and a balanced lifestyle.
@@ -70,9 +65,7 @@
 
           <td width="40%" align="center">
             <img src="images/Client2_IndividualYoga.png" width="350" alt="Individual Yoga Session">
-            <p style="font-family: Arial; font-size:11px;">
-              <strong>Personal Training Session</strong>
-            </p>
+            <p><strong>Personal Training Session</strong></p>
           </td>
 
         </tr>
@@ -81,52 +74,30 @@
 
     <hr>
 
-    <!-- INSTRUCTORS / TEAM SECTION -->
+    <!-- INSTRUCTORS -->
     <section>
-      <h2 style="font-family: Arial; font-size:25px;">
-        <strong>Our Instructors</strong>
-      </h2>
+      <h2><strong>Our Instructors</strong></h2>
 
       <table width="100%" cellpadding="15" border="1">
         <tr>
-          <td align="center">
-            <strong>Instructor 1</strong><br>
-            Yoga Specialist
-          </td>
-          <td align="center">
-            <strong>Instructor 2</strong><br>
-            Pilates Coach
-          </td>
-          <td align="center">
-            <strong>Instructor 3</strong><br>
-            Zumba Instructor
-          </td>
+          <td><strong>Instructor 1</strong><br>Yoga Specialist</td>
+          <td><strong>Instructor 2</strong><br>Pilates Coach</td>
+          <td><strong>Instructor 3</strong><br>Zumba Instructor</td>
         </tr>
 
         <tr>
-          <td align="center">
-            <strong>Instructor 4</strong><br>
-            Strength Training
-          </td>
-          <td align="center">
-            <strong>Instructor 5</strong><br>
-            Mobility & Stretch
-          </td>
-          <td align="center">
-            <strong>Instructor 6</strong><br>
-            Cardio Fitness
-          </td>
+          <td><strong>Instructor 4</strong><br>Strength Training</td>
+          <td><strong>Instructor 5</strong><br>Mobility & Stretch</td>
+          <td><strong>Instructor 6</strong><br>Cardio Fitness</td>
         </tr>
       </table>
     </section>
 
     <hr>
 
-    <!-- CONTACT FORM (REQUIRED SECTION) -->
+    <!-- CONTACT FORM -->
     <section id="contact">
-      <h2 style="font-family: Arial; font-size:25px;">
-        <strong>Contact Us / Custom Order</strong>
-      </h2>
+      <h2><strong>Contact Us / Custom Order</strong></h2>
 
       <p>
         Use the form below to send feedback, ask questions, or request custom services such as
@@ -135,19 +106,16 @@
 
       <form>
 
-        <!-- NAME -->
         <p>
           <label for="name">Full Name:</label><br>
-          <input type="text" id="name" name="name" size="40">
+          <input type="text" id="name" name="name">
         </p>
 
-        <!-- EMAIL -->
         <p>
           <label for="email">Email Address:</label><br>
-          <input type="email" id="email" name="email" size="40">
+          <input type="email" id="email" name="email">
         </p>
 
-        <!-- REQUEST TYPE -->
         <p>
           <label for="request">Request Type:</label><br>
           <select id="request" name="request">
@@ -157,7 +125,6 @@
           </select>
         </p>
 
-        <!-- CLASS SELECTION -->
         <p>
           <label for="class">Select Class (Optional):</label><br>
           <select id="class" name="class">
@@ -167,13 +134,11 @@
           </select>
         </p>
 
-        <!-- MESSAGE -->
         <p>
           <label for="message">Message:</label><br>
           <textarea id="message" name="message" rows="5" cols="40"></textarea>
         </p>
 
-        <!-- SUBMIT -->
         <p>
           <input type="submit" value="Submit">
           <input type="reset" value="Clear">
@@ -190,22 +155,18 @@
 
     <table width="100%" cellpadding="10">
 
-      <!-- NEWSLETTER -->
       <tr>
         <td colspan="4">
-          <h3 style="font-family: Arial; font-size:25px;">
-            <strong>Subscribe to Our Newsletter</strong>
-          </h3>
+          <h3><strong>Subscribe to Our Newsletter</strong></h3>
 
           <form>
             <label>Enter your email:</label><br>
-            <input type="email" size="30">
+            <input type="email">
             <input type="submit" value="Subscribe">
           </form>
         </td>
       </tr>
 
-      <!-- FOOTER LINKS -->
       <tr>
 
         <td>
@@ -239,9 +200,7 @@
 
     </table>
 
-    <p style="text-align:center; font-family: Arial; font-size:11px;">
-      <strong>&copy; 2026 ABC Fitness Studio</strong>
-    </p>
+    <p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
 
   </footer>
 
