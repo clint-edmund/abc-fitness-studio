@@ -70,7 +70,6 @@ th {
   background-color: #91B9D2;
 }
 
-/* ✅ FIX: Footer alignment override */
 footer td {
   text-align: left;
 }
@@ -113,7 +112,7 @@ footer {
   background-color: #FCFCFC;
   padding: 10px;
   margin-top: 20px;
-  border-top: 1px solid #ccc; /* ✅ optional but helpful */
+  border-top: 1px solid #ccc;
 }
 
 footer p {
