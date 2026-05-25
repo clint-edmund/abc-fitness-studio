@@ -87,7 +87,7 @@
 
         <tr>
           <td><strong>Instructor 4</strong><br>Strength Training</td>
-          <td><strong>Instructor 5</strong><br>Mobility & Stretch</td>
+          <td><strong>Instructor 5</strong><br>Mobility &amp; Stretch</td>
           <td><strong>Instructor 6</strong><br>Cardio Fitness</td>
         </tr>
       </table>
@@ -104,15 +104,18 @@
         private training sessions or group bookings.
       </p>
 
-      <form>
+      <div id="formAlert" role="alert" style="display:none; border:1px solid #cc0000; padding:10px; margin-bottom:15px; background:#ffe6e6;">
+      </div>
+
+      <form id="contactForm">
 
         <p>
-          <label for="name">Full Name:</label><br>
+          <label for="name">Full Name: <strong>(Required)</strong></label><br>
           <input type="text" id="name" name="name">
         </p>
 
         <p>
-          <label for="email">Email Address:</label><br>
+          <label for="email">Email Address: <strong>(Required)</strong></label><br>
           <input type="email" id="email" name="email">
         </p>
 
@@ -135,7 +138,7 @@
         </p>
 
         <p>
-          <label for="message">Message:</label><br>
+          <label for="message">Message: <strong>(Required)</strong></label><br>
           <textarea id="message" name="message" rows="5" cols="40"></textarea>
         </p>
 
@@ -159,9 +162,9 @@
         <td colspan="4">
           <h3><strong>Subscribe to Our Newsletter</strong></h3>
 
-          <form>
+          <form id="newsletterForm">
             <label>Enter your email:</label><br>
-            <input type="email">
+            <input type="email" id="newsletterEmail">
             <input type="submit" value="Subscribe">
           </form>
         </td>
@@ -203,6 +206,57 @@
     <p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
 
   </footer>
+
+  <!-- JAVASCRIPT FOR CONTACT FORM VALIDATION + ALERTS -->
+  <script>
+    // ----- CONTACT FORM VALIDATION -----
+    const contactForm = document.getElementById("contactForm");
+    const formAlert = document.getElementById("formAlert");
+
+    contactForm.onsubmit = function(event) {
+      event.preventDefault(); // stop the form from actually submitting
+
+      // Collect missing required fields
+      const missing = [];
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name === "") missing.push("Full Name is required.");
+      if (email === "") missing.push("Email Address is required.");
+      if (message === "") missing.push("Message is required.");
+
+      // If missing info, show HTML alert + JS alert
+      if (missing.length > 0) {
+        alert("Please complete the required fields before submitting.");
+
+        formAlert.style.display = "block";
+        formAlert.innerHTML =
+          "<strong>Please fix the following before submitting:</strong>" +
+          "<ul>" + missing.map(item => "<li>" + item + "</li>").join("") + "</ul>";
+
+        return; // stop here (do not proceed)
+      }
+
+      // If valid, hide the HTML alert and show success JS alert
+      formAlert.style.display = "none";
+      formAlert.innerHTML = "";
+
+      alert("Thank you! Your contact form has been submitted.");
+
+      // Optional: Clear the form after successful submit
+      contactForm.reset();
+    };
+
+    // ----- OPTIONAL: NEWSLETTER ALERT -----
+    const newsletterForm = document.getElementById("newsletterForm");
+    newsletterForm.onsubmit = function(event) {
+      event.preventDefault();
+      alert("Thank you for subscribing to our newsletter!");
+      newsletterForm.reset();
+    };
+  </script>
 
 </body>
 </html>

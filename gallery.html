@@ -21,14 +21,15 @@
           <p>Move. Connect. Community.</p>
 
           <nav>
-            <a href="index.html">Home</a> |
-            <a href="classes.html">Classes</a> |
-            <a href="classes.html#schedule">Schedule</a> |
-            <a href="about.html">About Us</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="about.html#contact">Contact</a> |
-            <a href="classes.html#book">Book Class</a>
-          </nav>
+  			<a href="index.html">Home</a> |
+  			<a href="classes.html">Classes</a> |
+  			<a href="classes.html#schedule">Schedule</a> |
+  			<a href="about.html">About Us</a> |
+  			<a href="gallery.html">Gallery</a> |
+  			<a href="about.html#contact">Contact</a> |
+  			<a href="classes.html#book">Book Class</a>
+		  </nav>
+
         </td>
       </tr>
     </table>
@@ -41,64 +42,85 @@
     <h2><strong>Gallery &amp; Products</strong></h2>
     <p>Browse our products and fitness sessions. Click “Add to Cart” to select an item.</p>
 
-    <!-- PRODUCT TABLE -->
     <table width="100%" cellpadding="15" border="1">
 
-      <!-- ROW 1 -->
       <tr>
         <td>
-          <img src="images/Client2_TeeShirt.png" width="200" alt="Fitness T-Shirt"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_TeeShirt.png" width="200"><br>
+          <p><strong>Fitness T-Shirt</strong></p>
+          <p>Lightweight and breathable shirt perfect for workouts and casual wear.</p>
+          <button onclick="addToCart('Fitness T-Shirt')">Add to Cart</button>
         </td>
 
         <td>
-          <img src="images/Client2_WaterBottle.png" width="200" alt="Water Bottle"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_WaterBottle.png" width="200"><br>
+          <p><strong>Water Bottle</strong></p>
+          <p>Durable reusable bottle to keep you hydrated during every session.</p>
+          <button onclick="addToCart('Water Bottle')">Add to Cart</button>
         </td>
 
         <td>
-          <img src="images/Client2_YogaMat.png" width="200" alt="Yoga Mat"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_YogaMat.png" width="200"><br>
+          <p><strong>Yoga Mat</strong></p>
+          <p>Non-slip mat designed for comfort and stability during yoga practice.</p>
+          <button onclick="addToCart('Yoga Mat')">Add to Cart</button>
         </td>
       </tr>
 
-      <!-- ROW 2 -->
       <tr>
         <td>
-          <img src="images/Client2_GroupYoga.png" width="200" alt="Group Yoga Class"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_GroupYoga.png" width="200"><br>
+          <p><strong>Group Yoga Class</strong></p>
+          <p>Relaxing group session focused on flexibility, breathing, and mindfulness.</p>
+          <button onclick="addToCart('Group Yoga Class')">Add to Cart</button>
         </td>
 
         <td>
-          <img src="images/Client2_GroupPilates.png" width="200" alt="Group Pilates Class"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_GroupPilates.png" width="200"><br>
+          <p><strong>Group Pilates Class</strong></p>
+          <p>Strengthen your core and improve posture in a guided group environment.</p>
+          <button onclick="addToCart('Group Pilates Class')">Add to Cart</button>
         </td>
 
         <td>
-          <img src="images/Client2_GroupKickboxing.png" width="200" alt="Group Kickboxing Class"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_GroupKickboxing.png" width="200"><br>
+          <p><strong>Group Kickboxing Class</strong></p>
+          <p>High-energy cardio workout combining punches, kicks, and endurance training.</p>
+          <button onclick="addToCart('Group Kickboxing Class')">Add to Cart</button>
         </td>
       </tr>
 
-      <!-- ROW 3 -->
       <tr>
         <td>
-          <img src="images/Client2_IndividualYoga.png" width="200" alt="Individual Yoga Session"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_IndividualYoga.png" width="200"><br>
+          <p><strong>Individual Yoga Session</strong></p>
+          <p>Personalized yoga training tailored to your skill level and goals.</p>
+          <button onclick="addToCart('Individual Yoga Session')">Add to Cart</button>
         </td>
 
         <td>
-          <img src="images/Client2_IndividualPilates.png" width="200" alt="Individual Pilates Session"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_IndividualPilates.png" width="200"><br>
+          <p><strong>Individual Pilates Session</strong></p>
+          <p>One-on-one coaching to enhance strength, flexibility, and body control.</p>
+          <button onclick="addToCart('Individual Pilates Session')">Add to Cart</button>
         </td>
 
         <td>
-          <img src="images/Client2_IndividualKickboxing.png" width="200" alt="Individual Kickboxing Session"><br><br>
-          <button type="button">Add to Cart</button>
+          <img src="images/Client2_IndividualKickboxing.png" width="200"><br>
+          <p><strong>Individual Kickboxing Session</strong></p>
+          <p>Private session focused on technique, strength, and high-intensity training.</p>
+          <button onclick="addToCart('Individual Kickboxing Session')">Add to Cart</button>
         </td>
       </tr>
 
     </table>
+
+    <!-- CART -->
+    <h3>Your Cart</h3>
+    <ul id="cartList"></ul>
+
+    <button id="clearCartBtn">Clear Cart</button>
+    <button id="processOrderBtn">Process Order</button>
 
   </main>
 
@@ -107,57 +129,64 @@
     <hr>
 
     <table width="100%" cellpadding="10">
-
-      <!-- NEWSLETTER -->
       <tr>
         <td colspan="4">
           <h3><strong>Subscribe to Our Newsletter</strong></h3>
 
           <form>
-            <label for="newsletter">Enter your email:</label><br>
-            <input type="email" id="newsletter" name="newsletter">
+            <input type="email" id="newsletter">
             <input type="submit" value="Subscribe">
           </form>
         </td>
       </tr>
-
-      <!-- FOOTER LINKS -->
-      <tr>
-
-        <td>
-          <strong>Follow Us</strong><br>
-          <a href="#">Instagram</a><br>
-          <a href="#">Facebook</a><br>
-          <a href="#">Twitter</a>
-        </td>
-
-        <td>
-          <strong>Quick Links</strong><br>
-          <a href="index.html">Home</a><br>
-          <a href="classes.html">Classes</a><br>
-          <a href="gallery.html">Gallery</a><br>
-          <a href="about.html">About Us</a>
-        </td>
-
-        <td>
-          <strong>Contact</strong><br>
-          8505 Snow Powder Terrace<br>
-          Ashburn, VA 20147<br>
-          Phone: (301) 439-1877
-        </td>
-
-        <td>
-          <strong>Email</strong><br>
-          info@abcfitness.com
-        </td>
-
-      </tr>
-
     </table>
 
     <p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
-
   </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    let cart = [];
+
+    function addToCart(item) {
+      cart.push(item);
+      alert(item + " added to cart!");
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById("cartList");
+      cartList.innerHTML = "";
+
+      cart.forEach(function(item) {
+        let li = document.createElement("li");
+        li.innerText = item;
+        cartList.appendChild(li);
+      });
+    }
+
+    document.getElementById("clearCartBtn").onclick = function() {
+      cart = [];
+      updateCart();
+      alert("Cart has been cleared.");
+    };
+
+    document.getElementById("processOrderBtn").onclick = function() {
+      if (cart.length === 0) {
+        alert("Your cart is empty. Please add items before processing your order.");
+      } else {
+        alert("Processing Order...");
+        cart = [];
+        updateCart();
+      }
+    };
+
+    const form = document.querySelector("form");
+    form.onsubmit = function(event) {
+      event.preventDefault();
+      alert("Thank you for subscribing!");
+    };
+  </script>
 
 </body>
 </html>

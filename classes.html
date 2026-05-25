@@ -154,9 +154,9 @@
         <td colspan="4">
           <h3><strong>Subscribe to Our Newsletter</strong></h3>
 
-          <form>
+          <form id="newsletterForm">
             <label>Enter your email:</label><br>
-            <input type="email">
+            <input type="email" id="newsletterEmail">
             <input type="submit" value="Subscribe">
           </form>
         </td>
@@ -198,6 +198,16 @@
     <p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
 
   </footer>
+  
+<script>
+  const newsletterForm = document.getElementById("newsletterForm");
+
+  newsletterForm.onsubmit = function(event) {
+    event.preventDefault();
+    alert("Thank you for subscribing to our newsletter!");
+    newsletterForm.reset();
+  };
+</script>
 
 </body>
 </html>
