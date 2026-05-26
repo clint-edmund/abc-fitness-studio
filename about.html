@@ -207,16 +207,17 @@
 
   </footer>
 
-  <!-- JAVASCRIPT FOR CONTACT FORM VALIDATION + ALERTS -->
+  <!-- JAVASCRIPT FOR FORM VALIDATION ALERTS -->
   <script>
+  window.onload = function() {
+
     // ----- CONTACT FORM VALIDATION -----
     const contactForm = document.getElementById("contactForm");
     const formAlert = document.getElementById("formAlert");
 
     contactForm.onsubmit = function(event) {
-      event.preventDefault(); // stop the form from actually submitting
+      event.preventDefault();
 
-      // Collect missing required fields
       const missing = [];
 
       const name = document.getElementById("name").value.trim();
@@ -227,7 +228,6 @@
       if (email === "") missing.push("Email Address is required.");
       if (message === "") missing.push("Message is required.");
 
-      // If missing info, show HTML alert + JS alert
       if (missing.length > 0) {
         alert("Please complete the required fields before submitting.");
 
@@ -236,27 +236,66 @@
           "<strong>Please fix the following before submitting:</strong>" +
           "<ul>" + missing.map(item => "<li>" + item + "</li>").join("") + "</ul>";
 
-        return; // stop here (do not proceed)
+        return;
       }
 
-      // If valid, hide the HTML alert and show success JS alert
+      // HIDE ALERT BOX
       formAlert.style.display = "none";
       formAlert.innerHTML = "";
 
+      // SAVE TO LOCALSTORAGE
+      const orderData = {
+        name: name,
+        email: email,
+        message: message,
+        requestType: document.getElementById("request").value,
+        selectedClass: document.getElementById("class").value
+      };
+
+      try {
+        localStorage.setItem("customerOrder", JSON.stringify(orderData));
+      } catch (e) {
+        console.warn("Could not save to localStorage.");
+      }
+
+      // SUCCESS SUBMISSION ALERT
       alert("Thank you! Your contact form has been submitted.");
 
-      // Optional: Clear the form after successful submit
       contactForm.reset();
     };
 
-    // ----- OPTIONAL: NEWSLETTER ALERT -----
+    // ----- LOAD SAVED DATA -----
+    try {
+      const saved = JSON.parse(localStorage.getItem("customerOrder"));
+
+      if (saved) {
+        document.getElementById("name").value = saved.name || "";
+        document.getElementById("email").value = saved.email || "";
+        document.getElementById("message").value = saved.message || "";
+      }
+    } catch (e) {
+      console.warn("Stored data is corrupted.");
+    }
+
+    // ----- FOOTER NEWSLETTER -----
     const newsletterForm = document.getElementById("newsletterForm");
+
     newsletterForm.onsubmit = function(event) {
       event.preventDefault();
-      alert("Thank you for subscribing to our newsletter!");
+
+      const email = document.getElementById("newsletterEmail").value.trim();
+
+      if (email === "") {
+        alert("Please enter an email address.");
+        return;
+      }
+
+      alert("Thank you for subscribing, " + email + "!");
       newsletterForm.reset();
     };
-  </script>
+
+  };
+</script>
 
 </body>
 </html>

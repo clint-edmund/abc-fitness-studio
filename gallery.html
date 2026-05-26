@@ -8,185 +8,231 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <table width="100%" cellpadding="10">
-      <tr>
-        <td width="20%">
-          <img src="images/logo.png" alt="ABC Fitness Studio Logo" width="80">
-        </td>
+<!-- HEADER -->
+<header>
+  <table width="100%" cellpadding="10">
+    <tr>
+      <td width="20%">
+        <img src="images/logo.png" width="80" alt="Logo">
+      </td>
 
-        <td width="80%">
-          <h1><strong>ABC FITNESS STUDIO</strong></h1>
-          <p>Move. Connect. Community.</p>
+      <td width="80%">
+        <h1><strong>ABC FITNESS STUDIO</strong></h1>
+        <p>Move. Connect. Community.</p>
 
-          <nav>
-  			<a href="index.html">Home</a> |
-  			<a href="classes.html">Classes</a> |
-  			<a href="classes.html#schedule">Schedule</a> |
-  			<a href="about.html">About Us</a> |
-  			<a href="gallery.html">Gallery</a> |
-  			<a href="about.html#contact">Contact</a> |
-  			<a href="classes.html#book">Book Class</a>
-		  </nav>
+        <nav>
+          <a href="index.html">Home</a> |
+          <a href="classes.html">Classes</a> |
+          <a href="classes.html#schedule">Schedule</a> |
+          <a href="about.html">About Us</a> |
+          <a href="gallery.html">Gallery</a> |
+          <a href="about.html#contact">Contact</a> |
+          <a href="classes.html#book">Book Class</a>
+        </nav>
+      </td>
+    </tr>
+  </table>
+  <hr>
+</header>
 
-        </td>
-      </tr>
-    </table>
-    <hr>
-  </header>
+<!-- MAIN -->
+<main>
 
-  <!-- MAIN CONTENT -->
-  <main>
+<h2><strong>Gallery &amp; Products</strong></h2>
+<p>Browse items and click "Add to Cart".</p>
 
-    <h2><strong>Gallery &amp; Products</strong></h2>
-    <p>Browse our products and fitness sessions. Click “Add to Cart” to select an item.</p>
+<table border="1" cellpadding="15">
 
-    <table width="100%" cellpadding="15" border="1">
+<tr>
+<td>
+<img src="images/Client2_TeeShirt.png" width="200"><br>
+<strong>Fitness T-Shirt</strong><br>
+<button onclick="addToCart('Fitness T-Shirt')">Add to Cart</button>
+</td>
 
-      <tr>
-        <td>
-          <img src="images/Client2_TeeShirt.png" width="200"><br>
-          <p><strong>Fitness T-Shirt</strong></p>
-          <p>Lightweight and breathable shirt perfect for workouts and casual wear.</p>
-          <button onclick="addToCart('Fitness T-Shirt')">Add to Cart</button>
-        </td>
+<td>
+<img src="images/Client2_WaterBottle.png" width="200"><br>
+<strong>Water Bottle</strong><br>
+<button onclick="addToCart('Water Bottle')">Add to Cart</button>
+</td>
 
-        <td>
-          <img src="images/Client2_WaterBottle.png" width="200"><br>
-          <p><strong>Water Bottle</strong></p>
-          <p>Durable reusable bottle to keep you hydrated during every session.</p>
-          <button onclick="addToCart('Water Bottle')">Add to Cart</button>
-        </td>
+<td>
+<img src="images/Client2_YogaMat.png" width="200"><br>
+<strong>Yoga Mat</strong><br>
+<button onclick="addToCart('Yoga Mat')">Add to Cart</button>
+</td>
+</tr>
 
-        <td>
-          <img src="images/Client2_YogaMat.png" width="200"><br>
-          <p><strong>Yoga Mat</strong></p>
-          <p>Non-slip mat designed for comfort and stability during yoga practice.</p>
-          <button onclick="addToCart('Yoga Mat')">Add to Cart</button>
-        </td>
-      </tr>
+<tr>
+<td>
+<img src="images/Client2_GroupYoga.png" width="200"><br>
+<strong>Group Yoga</strong><br>
+<button onclick="addToCart('Group Yoga')">Add to Cart</button>
+</td>
 
-      <tr>
-        <td>
-          <img src="images/Client2_GroupYoga.png" width="200"><br>
-          <p><strong>Group Yoga Class</strong></p>
-          <p>Relaxing group session focused on flexibility, breathing, and mindfulness.</p>
-          <button onclick="addToCart('Group Yoga Class')">Add to Cart</button>
-        </td>
+<td>
+<img src="images/Client2_GroupPilates.png" width="200"><br>
+<strong>Group Pilates</strong><br>
+<button onclick="addToCart('Group Pilates')">Add to Cart</button>
+</td>
 
-        <td>
-          <img src="images/Client2_GroupPilates.png" width="200"><br>
-          <p><strong>Group Pilates Class</strong></p>
-          <p>Strengthen your core and improve posture in a guided group environment.</p>
-          <button onclick="addToCart('Group Pilates Class')">Add to Cart</button>
-        </td>
+<td>
+<img src="images/Client2_GroupKickboxing.png" width="200"><br>
+<strong>Group Kickboxing</strong><br>
+<button onclick="addToCart('Group Kickboxing')">Add to Cart</button>
+</td>
+</tr>
 
-        <td>
-          <img src="images/Client2_GroupKickboxing.png" width="200"><br>
-          <p><strong>Group Kickboxing Class</strong></p>
-          <p>High-energy cardio workout combining punches, kicks, and endurance training.</p>
-          <button onclick="addToCart('Group Kickboxing Class')">Add to Cart</button>
-        </td>
-      </tr>
+</table>
 
-      <tr>
-        <td>
-          <img src="images/Client2_IndividualYoga.png" width="200"><br>
-          <p><strong>Individual Yoga Session</strong></p>
-          <p>Personalized yoga training tailored to your skill level and goals.</p>
-          <button onclick="addToCart('Individual Yoga Session')">Add to Cart</button>
-        </td>
+<!-- CART -->
+<h3>Shopping Cart</h3>
 
-        <td>
-          <img src="images/Client2_IndividualPilates.png" width="200"><br>
-          <p><strong>Individual Pilates Session</strong></p>
-          <p>One-on-one coaching to enhance strength, flexibility, and body control.</p>
-          <button onclick="addToCart('Individual Pilates Session')">Add to Cart</button>
-        </td>
+<button id="viewCartBtn">View Cart</button>
+<button id="clearCartBtn">Clear Cart</button>
+<button id="processOrderBtn">Process Order</button>
 
-        <td>
-          <img src="images/Client2_IndividualKickboxing.png" width="200"><br>
-          <p><strong>Individual Kickboxing Session</strong></p>
-          <p>Private session focused on technique, strength, and high-intensity training.</p>
-          <button onclick="addToCart('Individual Kickboxing Session')">Add to Cart</button>
-        </td>
-      </tr>
+<ul id="cartList"></ul>
 
-    </table>
+</main>
 
-    <!-- CART -->
-    <h3>Your Cart</h3>
-    <ul id="cartList"></ul>
+<!-- FOOTER -->
+<footer>
+<hr>
 
-    <button id="clearCartBtn">Clear Cart</button>
-    <button id="processOrderBtn">Process Order</button>
+<table width="100%" cellpadding="10">
 
-  </main>
+<tr>
+<td colspan="4">
+<h3><strong>Subscribe to Our Newsletter</strong></h3>
 
-  <!-- FOOTER -->
-  <footer>
-    <hr>
+<form id="newsletterForm">
+<input type="email" id="newsletter" required>
+<input type="submit" value="Subscribe">
+</form>
+</td>
+</tr>
 
-    <table width="100%" cellpadding="10">
-      <tr>
-        <td colspan="4">
-          <h3><strong>Subscribe to Our Newsletter</strong></h3>
+<tr>
+<td>
+<strong>Follow Us</strong><br>
+Instagram<br>
+Facebook<br>
+Twitter
+</td>
 
-          <form>
-            <input type="email" id="newsletter">
-            <input type="submit" value="Subscribe">
-          </form>
-        </td>
-      </tr>
-    </table>
+<td>
+<strong>Quick Links</strong><br>
+Home<br>
+Classes<br>
+Gallery<br>
+About Us
+</td>
 
-    <p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
-  </footer>
+<td>
+<strong>Contact</strong><br>
+8505 Snow Powder Terrace<br>
+Ashburn, VA
+</td>
 
-  <!-- JAVASCRIPT -->
-  <script>
-    let cart = [];
+<td>
+<strong>Email</strong><br>
+info@abcfitness.com
+</td>
+</tr>
 
-    function addToCart(item) {
-      cart.push(item);
-      alert(item + " added to cart!");
-      updateCart();
-    }
+</table>
 
-    function updateCart() {
-      const cartList = document.getElementById("cartList");
-      cartList.innerHTML = "";
+<p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
 
-      cart.forEach(function(item) {
-        let li = document.createElement("li");
-        li.innerText = item;
-        cartList.appendChild(li);
-      });
-    }
+</footer>
 
-    document.getElementById("clearCartBtn").onclick = function() {
-      cart = [];
-      updateCart();
-      alert("Cart has been cleared.");
-    };
+<!-- JAVASCRIPT -->
+<script>
+window.onload = function() {
 
-    document.getElementById("processOrderBtn").onclick = function() {
-      if (cart.length === 0) {
-        alert("Your cart is empty. Please add items before processing your order.");
-      } else {
-        alert("Processing Order...");
-        cart = [];
-        updateCart();
-      }
-    };
+let cart = [];
 
-    const form = document.querySelector("form");
-    form.onsubmit = function(event) {
-      event.preventDefault();
-      alert("Thank you for subscribing!");
-    };
-  </script>
+// LOAD CART
+function loadCart() {
+  const saved = sessionStorage.getItem("cart");
+  cart = saved ? JSON.parse(saved) : [];
+}
+
+// SAVE CART
+function saveCart() {
+  sessionStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// DISPLAY CART
+function updateCart() {
+  const list = document.getElementById("cartList");
+  list.innerHTML = "";
+
+  if (cart.length === 0) {
+    list.innerHTML = "<li>Your cart is empty.</li>";
+    return;
+  }
+
+  cart.forEach(item => {
+    let li = document.createElement("li");
+    li.innerText = item;
+    list.appendChild(li);
+  });
+}
+
+// ADD ITEM
+window.addToCart = function(item) {
+  loadCart();
+  cart.push(item);
+  saveCart();
+  updateCart();
+  alert("Item added to the cart.");
+};
+
+// VIEW CART
+document.getElementById("viewCartBtn").onclick = function() {
+  loadCart();
+  updateCart();
+};
+
+// CLEAR CART
+document.getElementById("clearCartBtn").onclick = function() {
+  cart = [];
+  saveCart();
+  updateCart();
+  alert("Cart cleared.");
+};
+
+// PROCESS ORDER
+document.getElementById("processOrderBtn").onclick = function() {
+  loadCart();
+
+  if (cart.length === 0) {
+    alert("Your cart is empty.");
+  } else {
+    alert("Thank you for your order.");
+    cart = [];
+    saveCart();
+    updateCart();
+  }
+};
+
+// LOAD ON START
+loadCart();
+updateCart();
+
+// ----- FOOTER NEWSLETTER -----
+const newsletterForm = document.getElementById("newsletterForm");
+
+newsletterForm.onsubmit = function(e) {
+  e.preventDefault();
+  alert("Thank you for subscribing.");
+  newsletterForm.reset();
+};
+
+};
+</script>
 
 </body>
 </html>
