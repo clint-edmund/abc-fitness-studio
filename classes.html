@@ -2,212 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ABC Fitness Studio - Community & Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Fitness Studio - Classes</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <table width="100%" cellpadding="10">
-      <tr>
-        <td width="20%">
-          <img src="images/logo.png" alt="ABC Fitness Studio Logo" width="80">
-        </td>
+<header>
+  <div class="container">
+    <div class="site-header">
+      <img src="images/logo.png" alt="ABC Fitness Studio Logo" class="logo">
+      <div>
+        <h1>ABC Fitness Studio</h1>
+        <p class="tagline">Balance, wellness, and active living for every fitness level.</p>
+      </div>
+    </div>
 
-        <td width="80%">
-          <h1><strong>ABC FITNESS STUDIO</strong></h1>
-          <p>Move. Connect. Community.</p>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html" class="active">Classes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-          <nav>
-            <a href="index.html">Home</a> |
-            <a href="classes.html">Classes</a> |
-            <a href="classes.html#schedule">Schedule</a> |
-            <a href="about.html">About Us</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="about.html#contact">Contact</a> |
-            <a href="#events">Events</a>
-          </nav>
-        </td>
-      </tr>
-    </table>
-    <hr>
-  </header>
+<main class="container">
 
-  <!-- MAIN CONTENT -->
-  <main>
+  <section>
+    <h2>Our Fitness Classes</h2>
+    <p>
+      We offer a variety of fitness classes designed to help you stay active, healthy,
+      and motivated in a supportive environment.
+    </p>
+  </section>
 
-    <!-- PAGE TITLE -->
-    <h2><strong>Community, Events & Testimonials</strong></h2>
+  <section class="card-grid">
 
-    <!-- TESTIMONIALS -->
-    <section>
-      <h3><strong>Customer Testimonials</strong></h3>
-
-      <table width="100%" cellpadding="10" border="1">
-        <tr>
-          <td>
-            <p><strong>"ABC Fitness Studio helped me get back in shape and stay motivated. The instructors are supportive and encouraging!"</strong></p>
-          </td>
-
-          <td>
-            <p><strong>"Great atmosphere and amazing classes. I look forward to every session!"</strong></p>
-          </td>
-
-          <td>
-            <p><strong>"The yoga classes have improved both my physical and mental health."</strong></p>
-          </td>
-        </tr>
-      </table>
-    </section>
-
-    <hr>
-
-    <!-- COMMUNITY -->
-    <section>
-      <h3><strong>Community Involvement</strong></h3>
-
-      <table width="100%" cellpadding="10">
-        <tr>
-          <td width="50%" valign="top">
-            <p>
-              ABC Fitness Studio actively supports the local community by hosting charity fitness events,
-              wellness workshops, and group activities that bring people together.
-            </p>
-
-            <p>
-              We partner with local organizations to promote healthy living and encourage individuals
-              to stay active and engaged.
-            </p>
-          </td>
-
-          <td width="50%" align="center">
-            <img src="images/Client2_GroupYoga.png" width="350" alt="Community Yoga Event">
-            <p><strong>Community Yoga Session</strong></p>
-          </td>
-        </tr>
-      </table>
-    </section>
-
-    <hr>
-
-    <!-- EVENTS -->
-    <section id="events">
-      <h3><strong>Upcoming Events</strong></h3>
-
-      <table width="100%" cellpadding="10" border="1">
-
-        <tr>
-          <th>Event</th>
-          <th>Date</th>
-          <th>Description</th>
-        </tr>
-
-        <tr>
-          <td>Outdoor Yoga Session</td>
-          <td>June 15</td>
-          <td>Join us for a relaxing outdoor yoga class in the park.</td>
-        </tr>
-
-        <tr>
-          <td>Fitness Bootcamp</td>
-          <td>June 22</td>
-          <td>High-energy group workout designed to improve strength and endurance.</td>
-        </tr>
-
-        <tr>
-          <td>Zumba Night</td>
-          <td>June 29</td>
-          <td>Fun and energetic dance workout for all fitness levels.</td>
-        </tr>
-
-      </table>
-    </section>
-
-    <hr>
-
-    <!-- COLLABORATIONS -->
-    <section>
-      <h3><strong>Collaborations</strong></h3>
-
+    <article class="card">
+      <img src="images/Client2_GroupYoga.png" alt="Yoga Class">
+      <h3>Yoga</h3>
       <p>
-        ABC Fitness Studio collaborates with local gyms, wellness centers, and health professionals
-        to provide well-rounded fitness programs.
+        Yoga helps improve flexibility, balance, and relaxation. It is perfect for reducing stress
+        and building overall well-being.
       </p>
+    </article>
 
+    <article class="card">
+      <img src="images/Client2_GroupPilates.png" alt="Pilates Class">
+      <h3>Pilates</h3>
       <p>
-        From nutrition workshops to joint fitness events, our collaborations help create a stronger
-        and healthier community.
+        Pilates focuses on strengthening the core, improving posture, and building muscle control.
       </p>
-    </section>
+    </article>
 
-  </main>
+    <article class="card">
+      <img src="images/Client2_GroupKickboxing.png" alt="Zumba Class">
+      <h3>Zumba</h3>
+      <p>
+        Zumba offers a fun and energetic workout that combines music and movement to keep you motivated.
+      </p>
+    </article>
 
-  <!-- FOOTER -->
-  <footer>
-    <hr>
+  </section>
 
-    <table width="100%" cellpadding="10">
+  <section>
+    <h2>Community and Events</h2>
+    <div class="info-box">
+      <p>
+        ABC Fitness Studio supports the community through fitness events, wellness workshops,
+        and group activities that bring people together.
+      </p>
+    </div>
+  </section>
 
-      <tr>
-        <td colspan="4">
-          <h3><strong>Subscribe to Our Newsletter</strong></h3>
+</main>
 
-          <form id="newsletterForm">
-            <label>Enter your email:</label><br>
-            <input type="email" id="newsletterEmail">
-            <input type="submit" value="Subscribe">
-          </form>
-        </td>
-      </tr>
+<footer>
+  <div class="container">
 
-      <tr>
+    <div class="footer-grid">
 
-        <td>
-          <strong>Follow Us</strong><br>
+      <!-- Newsletter Section -->
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Stay updated with our latest classes and fitness tips.</p>
+
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="button">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p>
           <a href="#">Instagram</a><br>
           <a href="#">Facebook</a><br>
           <a href="#">Twitter</a>
-        </td>
+        </p>
+      </div>
 
-        <td>
-          <strong>Quick Links</strong><br>
-          <a href="index.html">Home</a><br>
-          <a href="classes.html">Classes</a><br>
-          <a href="gallery.html">Gallery</a><br>
-          <a href="about.html">About Us</a>
-        </td>
+    </div>
 
-        <td>
-          <strong>Contact</strong><br>
-          8505 Snow Powder Terrace<br>
-          Ashburn, VA 20147<br>
-          Phone: (301) 439-1877
-        </td>
+    <p>&copy; 2026 ABC Fitness Studio. All rights reserved.</p>
 
-        <td>
-          <strong>Email</strong><br>
-          info@abcfitness.com
-        </td>
-
-      </tr>
-
-    </table>
-
-    <p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
-
-  </footer>
-  
-<script>
-  const newsletterForm = document.getElementById("newsletterForm");
-
-  newsletterForm.onsubmit = function(event) {
-    event.preventDefault();
-    alert("Thank you for subscribing to our newsletter!");
-    newsletterForm.reset();
-  };
-</script>
+  </div>
+</footer>
 
 </body>
 </html>

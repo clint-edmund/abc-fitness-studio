@@ -2,214 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABC Fitness Studio - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- HEADER -->
+  <!-- Header -->
   <header>
-    <table width="100%" cellpadding="10">
-      <tr>
-        <td width="20%">
-          <img src="images/logo.png" alt="ABC Fitness Studio Logo" width="80">
-        </td>
-        <td width="80%">
-          <h1><strong>ABC FITNESS STUDIO</strong></h1>
+    <div class="container">
+      <div class="site-header">
+        <img src="images/logo.png" alt="ABC Fitness Studio logo" class="logo">
+        <div>
+          <h1>ABC Fitness Studio</h1>
+          <p class="tagline">Balance, wellness, and active living for every fitness level.</p>
+        </div>
+      </div>
 
-          <p>Move. Connect. Community.</p>
-
-          <nav>
-            <a href="index.html">Home</a> |
-            <a href="classes.html">Classes</a> |
-            <a href="classes.html#schedule">Schedule</a> |
-            <a href="about.html">About Us</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="about.html#contact">Contact</a> |
-            <a href="classes.html#book">Book Class</a>
-          </nav>
-        </td>
-      </tr>
-    </table>
-    <hr>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
+  <!-- Main Content -->
+  <main class="container">
 
-    <!-- HERO SECTION -->
-    <section>
-      <table width="100%" cellpadding="10">
-        <tr>
-          <td width="55%" valign="top">
+    <!-- Hero / Welcome Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Welcome to ABC Fitness Studio</h2>
+        <p>
+          ABC Fitness Studio provides a welcoming environment for all fitness levels.
+          Our professional instructors guide you through Yoga, Pilates, and Zumba classes
+          designed to support your health and wellness goals.
+        </p>
+        <a href="classes.html" class="button">View Our Classes</a>
+      </div>
 
-            <h2><strong>Stronger Together.</strong></h2>
-
-            <p>Build strength, improve balance, and stay motivated.</p>
-
-            <p>
-              ABC Fitness Studio provides a welcoming environment for all fitness levels.
-              Our professional instructors guide you through Yoga, Pilates, and Zumba classes
-              designed to support your health and wellness goals.
-            </p>
-
-            <p>
-              <a href="classes.html">View Classes</a> |
-              <a href="classes.html#book">Book Now</a>
-            </p>
-
-          </td>
-
-          <td width="45%" align="center">
-            <img src="images/Client2_GroupYoga.png" width="400" alt="Group Yoga Class">
-            <p><strong>Group Yoga Session</strong></p>
-          </td>
-        </tr>
-      </table>
-      <hr>
+      <div class="hero-image">
+        <img src="images/Client2_GroupYoga.png" alt="Group yoga class at ABC Fitness Studio">
+      </div>
     </section>
 
-    <!-- FEATURED CLASSES -->
+    <!-- Featured Classes -->
     <section>
-      <table width="100%" cellpadding="10">
-        <tr>
+      <h2>Featured Classes</h2>
+      <div class="card-grid">
+        <article class="card">
+          <img src="images/Client2_GroupYoga.png" alt="Students participating in a yoga class">
+          <h3>Yoga</h3>
+          <p>
+            Improve flexibility, reduce stress, and build strength in a calm and supportive setting.
+          </p>
+        </article>
 
-          <td align="center">
-            <img src="images/Client2_GroupYoga.png" width="250" alt="Yoga Class"><br><br>
-            <h3><strong>YOGA</strong></h3>
-            <p>Improve flexibility, balance, and mental focus.</p>
-          </td>
+        <article class="card">
+          <img src="images/Client2_GroupPilates.png" alt="Students participating in a Pilates class">
+          <h3>Pilates</h3>
+          <p>
+            Strengthen your core, improve posture, and develop better balance with guided Pilates sessions.
+          </p>
+        </article>
 
-          <td align="center">
-            <img src="images/Client2_GroupPilates.png" width="250" alt="Pilates Class"><br><br>
-            <h3><strong>PILATES</strong></h3>
-            <p>Strengthen your core and improve posture.</p>
-          </td>
-
-          <td align="center">
-            <img src="images/Client2_GroupKickboxing.png" width="250" alt="Zumba Class"><br><br>
-            <h3><strong>ZUMBA</strong></h3>
-            <p>High-energy workouts to keep you active and energized.</p>
-          </td>
-
-        </tr>
-      </table>
-      <hr>
+        <article class="card">
+          <img src="images/Client2_GroupKickboxing.png" alt="Students participating in a Zumba fitness class">
+          <h3>Zumba</h3>
+          <p>
+            Enjoy an energetic workout that combines movement, fun, and community motivation.
+          </p>
+        </article>
+      </div>
     </section>
 
-    <!-- MORE CONTENT -->
+    <!-- Why Choose Us -->
     <section>
-      <table width="100%" cellpadding="10">
-        <tr>
-
-          <td>
-            <h3><strong>Class Schedule</strong></h3>
-            <p>View our weekly class schedule and find a session that fits your routine.</p>
-            <p><a href="classes.html#schedule">View Full Schedule</a></p>
-          </td>
-
-          <td>
-            <h3><strong>Our Community</strong></h3>
-            <p>
-              Join a supportive and motivating community that helps you stay committed
-              to your fitness goals and personal wellness.
-            </p>
-          </td>
-
-          <td>
-            <h3><strong>Customer Testimonial</strong></h3>
-            <p><strong>"ABC Fitness has completely changed my lifestyle. The instructors are amazing!"</strong></p>
-          </td>
-
-        </tr>
-      </table>
+      <h2>Why Choose Us</h2>
+      <div class="info-box">
+        <p>
+          Join a supportive and motivating community that helps you stay committed to your
+          fitness goals and personal wellness. We welcome beginners and experienced members alike.
+        </p>
+        <ul>
+          <li>Friendly and professional instructors</li>
+          <li>Classes for different fitness levels</li>
+          <li>Positive and welcoming atmosphere</li>
+          <li>Easy way to ask questions and contact the studio</li>
+        </ul>
+      </div>
     </section>
 
-    <hr>
-
-    <!-- HOURS -->
+    <!-- Visit Us -->
     <section>
-      <table width="100%" cellpadding="10">
-        <tr>
-          <td align="center">
-            <h3><strong>Hours of Operation</strong></h3>
-
-            <p>
-              Monday–Friday: 6 a.m. to 8 p.m.<br>
-              Saturday: 8 a.m. to 6 p.m.<br>
-              Sunday: Closed
-            </p>
-          </td>
-        </tr>
-      </table>
+      <h2>Visit or Contact Us</h2>
+      <div class="info-box">
+        <p><strong>Hours:</strong> Monday–Friday: 6 a.m. to 8 p.m.</p>
+        <p><strong>Email:</strong> info@abcfitness.com</p>
+        <p>
+          Have a question about classes or custom fitness support? Visit our
+          <a href="contact.html">Contact page</a> to send us a message.
+        </p>
+      </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
-    <hr>
+  <div class="container">
 
-    <table width="100%" cellpadding="10">
+    <div class="footer-grid">
 
-      <tr>
-        <td colspan="4">
-          <h3><strong>Subscribe to Our Newsletter</strong></h3>
+      <!-- Newsletter Section -->
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Stay updated with our latest classes and fitness tips.</p>
 
-          <form id="newsletterForm">
-            <label>Enter your email:</label><br>
-            <input type="email" id="newsletterEmail">
-            <input type="submit" value="Subscribe">
-          </form>
-        </td>
-      </tr>
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="button">Subscribe</button>
+        </form>
+      </div>
 
-      <tr>
-
-        <td>
-          <strong>Follow Us</strong><br>
+      <!-- Social Media Section -->
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p>
           <a href="#">Instagram</a><br>
           <a href="#">Facebook</a><br>
           <a href="#">Twitter</a>
-        </td>
+        </p>
+      </div>
 
-        <td>
-          <strong>Quick Links</strong><br>
-          <a href="index.html">Home</a><br>
-          <a href="classes.html">Classes</a><br>
-          <a href="gallery.html">Gallery</a><br>
-          <a href="about.html">About Us</a>
-        </td>
+    </div>
 
-        <td>
-          <strong>Contact</strong><br>
-          8505 Snow Powder Terrace<br>
-          Ashburn, VA 20147<br>
-          Phone: (301) 439-1877
-        </td>
+    <p>&copy; 2026 ABC Fitness Studio. All rights reserved.</p>
 
-        <td>
-          <strong>Email</strong><br>
-          info@abcfitness.com
-        </td>
-
-      </tr>
-
-    </table>
-
-    <p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
-
-  </footer>
-  <script>
-  const newsletterForm = document.getElementById("newsletterForm");
-
-  newsletterForm.onsubmit = function(event) {
-    event.preventDefault();
-    alert("Thank you for subscribing to our newsletter!");
-    newsletterForm.reset();
-   };
-  </script>
+  </div>
+</footer>
 
 </body>
 </html>

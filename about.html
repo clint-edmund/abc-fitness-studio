@@ -2,300 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ABC Fitness Studio - About Us / Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Fitness Studio - About</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <table width="100%" cellpadding="10">
-      <tr>
-        <td width="20%">
-          <img src="images/logo.png" width="80" alt="ABC Fitness Studio Logo">
-        </td>
+<header>
+  <div class="container">
+    <div class="site-header">
+      <img src="images/logo.png" alt="ABC Fitness Studio Logo" class="logo">
+      <div>
+        <h1>ABC Fitness Studio</h1>
+        <p class="tagline">Balance, wellness, and active living for every fitness level.</p>
+      </div>
+    </div>
 
-        <td width="80%">
-          <h1><strong>ABC FITNESS STUDIO</strong></h1>
-          <p>Move. Connect. Community.</p>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-          <nav>
-            <a href="index.html">Home</a> |
-            <a href="classes.html">Classes</a> |
-            <a href="classes.html#schedule">Schedule</a> |
-            <a href="about.html">About Us</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="#contact">Contact</a> |
-            <a href="classes.html#book">Book Class</a>
-          </nav>
-        </td>
-      </tr>
-    </table>
-    <hr>
-  </header>
+<main class="container">
 
-  <!-- MAIN CONTENT -->
-  <main>
+  <section>
+    <h2>About Our Studio</h2>
+    <p>
+      ABC Fitness Studio is dedicated to promoting health, wellness, and a balanced lifestyle.
+      We provide a welcoming environment for individuals of all fitness levels.
+    </p>
+    <p>
+      Our classes, including Yoga, Pilates, and Zumba, are designed to support flexibility,
+      strength, and overall well-being. Our instructors focus on helping each member reach
+      their personal fitness goals in a supportive community.
+    </p>
+  </section>
 
-    <!-- ABOUT SECTION -->
-    <section>
-      <table width="100%" cellpadding="10">
-        <tr>
-
-          <td width="60%" valign="top">
-            <h2><strong>About ABC Fitness Studio</strong></h2>
-
-            <p>
-              ABC Fitness Studio is dedicated to promoting health, wellness, and a balanced lifestyle.
-              We provide a welcoming environment for individuals of all fitness levels.
-            </p>
-
-            <p>
-              Our variety of classes, including Yoga, Pilates, and Zumba, are designed to support
-              flexibility, strength, and overall well-being. Our instructors focus on helping each
-              member reach their personal fitness goals in a supportive community.
-            </p>
-
-            <p>
-              Whether you are just starting your fitness journey or looking to improve your routine,
-              ABC Fitness Studio is here to support you every step of the way.
-            </p>
-          </td>
-
-          <td width="40%" align="center">
-            <img src="images/Client2_IndividualYoga.png" width="350" alt="Individual Yoga Session">
-            <p><strong>Personal Training Session</strong></p>
-          </td>
-
-        </tr>
-      </table>
-    </section>
-
-    <hr>
-
-    <!-- INSTRUCTORS -->
-    <section>
-      <h2><strong>Our Instructors</strong></h2>
-
-      <table width="100%" cellpadding="15" border="1">
-        <tr>
-          <td><strong>Instructor 1</strong><br>Yoga Specialist</td>
-          <td><strong>Instructor 2</strong><br>Pilates Coach</td>
-          <td><strong>Instructor 3</strong><br>Zumba Instructor</td>
-        </tr>
-
-        <tr>
-          <td><strong>Instructor 4</strong><br>Strength Training</td>
-          <td><strong>Instructor 5</strong><br>Mobility &amp; Stretch</td>
-          <td><strong>Instructor 6</strong><br>Cardio Fitness</td>
-        </tr>
-      </table>
-    </section>
-
-    <hr>
-
-    <!-- CONTACT FORM -->
-    <section id="contact">
-      <h2><strong>Contact Us / Custom Order</strong></h2>
-
+  <section>
+    <h2>Our Mission</h2>
+    <div class="info-box">
       <p>
-        Use the form below to send feedback, ask questions, or request custom services such as
-        private training sessions or group bookings.
+        Our mission is to create a positive and encouraging space where individuals can improve
+        their health, reduce stress, and build confidence through fitness and community support.
       </p>
+    </div>
+  </section>
 
-      <div id="formAlert" role="alert" style="display:none; border:1px solid #cc0000; padding:10px; margin-bottom:15px; background:#ffe6e6;">
+  <section>
+    <h2>Our Community</h2>
+    <img src="images/Client2_IndividualYoga.png" alt="Individual Yoga Session">
+    <p>
+      Whether you are just starting your fitness journey or looking to improve your routine,
+      ABC Fitness Studio is here to support you every step of the way.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- Newsletter Section -->
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Stay updated with our latest classes and fitness tips.</p>
+
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="button">Subscribe</button>
+        </form>
       </div>
 
-      <form id="contactForm">
-
+      <!-- Social Media Section -->
+      <div class="footer-section">
+        <h3>Follow Us</h3>
         <p>
-          <label for="name">Full Name: <strong>(Required)</strong></label><br>
-          <input type="text" id="name" name="name">
-        </p>
-
-        <p>
-          <label for="email">Email Address: <strong>(Required)</strong></label><br>
-          <input type="email" id="email" name="email">
-        </p>
-
-        <p>
-          <label for="request">Request Type:</label><br>
-          <select id="request" name="request">
-            <option>Feedback</option>
-            <option>Custom Order</option>
-            <option>General Question</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="class">Select Class (Optional):</label><br>
-          <select id="class" name="class">
-            <option>Yoga</option>
-            <option>Pilates</option>
-            <option>Zumba</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="message">Message: <strong>(Required)</strong></label><br>
-          <textarea id="message" name="message" rows="5" cols="40"></textarea>
-        </p>
-
-        <p>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Clear">
-        </p>
-
-      </form>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <hr>
-
-    <table width="100%" cellpadding="10">
-
-      <tr>
-        <td colspan="4">
-          <h3><strong>Subscribe to Our Newsletter</strong></h3>
-
-          <form id="newsletterForm">
-            <label>Enter your email:</label><br>
-            <input type="email" id="newsletterEmail">
-            <input type="submit" value="Subscribe">
-          </form>
-        </td>
-      </tr>
-
-      <tr>
-
-        <td>
-          <strong>Follow Us</strong><br>
           <a href="#">Instagram</a><br>
           <a href="#">Facebook</a><br>
           <a href="#">Twitter</a>
-        </td>
+        </p>
+      </div>
 
-        <td>
-          <strong>Quick Links</strong><br>
-          <a href="index.html">Home</a><br>
-          <a href="classes.html">Classes</a><br>
-          <a href="gallery.html">Gallery</a><br>
-          <a href="about.html">About Us</a>
-        </td>
+    </div>
 
-        <td>
-          <strong>Contact</strong><br>
-          8505 Snow Powder Terrace<br>
-          Ashburn, VA 20147<br>
-          Phone: (301) 439-1877
-        </td>
+    <p>&copy; 2026 ABC Fitness Studio. All rights reserved.</p>
 
-        <td>
-          <strong>Email</strong><br>
-          info@abcfitness.com
-        </td>
-
-      </tr>
-
-    </table>
-
-    <p><strong>&copy; 2026 ABC Fitness Studio</strong></p>
-
-  </footer>
-
-  <!-- JAVASCRIPT FOR FORM VALIDATION ALERTS -->
-  <script>
-  window.onload = function() {
-
-    // ----- CONTACT FORM VALIDATION -----
-    const contactForm = document.getElementById("contactForm");
-    const formAlert = document.getElementById("formAlert");
-
-    contactForm.onsubmit = function(event) {
-      event.preventDefault();
-
-      const missing = [];
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      if (name === "") missing.push("Full Name is required.");
-      if (email === "") missing.push("Email Address is required.");
-      if (message === "") missing.push("Message is required.");
-
-      if (missing.length > 0) {
-        alert("Please complete the required fields before submitting.");
-
-        formAlert.style.display = "block";
-        formAlert.innerHTML =
-          "<strong>Please fix the following before submitting:</strong>" +
-          "<ul>" + missing.map(item => "<li>" + item + "</li>").join("") + "</ul>";
-
-        return;
-      }
-
-      // HIDE ALERT BOX
-      formAlert.style.display = "none";
-      formAlert.innerHTML = "";
-
-      // SAVE TO LOCALSTORAGE
-      const orderData = {
-        name: name,
-        email: email,
-        message: message,
-        requestType: document.getElementById("request").value,
-        selectedClass: document.getElementById("class").value
-      };
-
-      try {
-        localStorage.setItem("customerOrder", JSON.stringify(orderData));
-      } catch (e) {
-        console.warn("Could not save to localStorage.");
-      }
-
-      // SUCCESS SUBMISSION ALERT
-      alert("Thank you! Your contact form has been submitted.");
-
-      contactForm.reset();
-    };
-
-    // ----- LOAD SAVED DATA -----
-    try {
-      const saved = JSON.parse(localStorage.getItem("customerOrder"));
-
-      if (saved) {
-        document.getElementById("name").value = saved.name || "";
-        document.getElementById("email").value = saved.email || "";
-        document.getElementById("message").value = saved.message || "";
-      }
-    } catch (e) {
-      console.warn("Stored data is corrupted.");
-    }
-
-    // ----- FOOTER NEWSLETTER -----
-    const newsletterForm = document.getElementById("newsletterForm");
-
-    newsletterForm.onsubmit = function(event) {
-      event.preventDefault();
-
-      const email = document.getElementById("newsletterEmail").value.trim();
-
-      if (email === "") {
-        alert("Please enter an email address.");
-        return;
-      }
-
-      alert("Thank you for subscribing, " + email + "!");
-      newsletterForm.reset();
-    };
-
-  };
-</script>
+  </div>
+</footer>
 
 </body>
 </html>
