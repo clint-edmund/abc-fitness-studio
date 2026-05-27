@@ -269,7 +269,13 @@ footer {
   text-align: center;
   padding: 15px;
 }
+footer a {
+  color: #FCFCFC; /* white so it's visible */
+}
 
+footer a:hover {
+  color: #DEF479; /* nice highlight on hover */
+}
 /* =========================
    MOBILE
 ========================= */
