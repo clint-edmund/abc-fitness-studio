@@ -1,5 +1,5 @@
 /* =========================
-   GALLERY PAGE - sessionStorage
+   GALLERY PAGE - sessionStorage (Cart)
 ========================= */
 const cartCount = document.getElementById("cartCount");
 const cartItems = document.getElementById("cartItems");
@@ -7,15 +7,18 @@ const addToCartButtons = document.querySelectorAll(".add-to-cart");
 const clearCartBtn = document.getElementById("clearCartBtn");
 const processOrderBtn = document.getElementById("processOrderBtn");
 
+/* GET CART */
 function getCart() {
   const cart = sessionStorage.getItem("cart");
   return cart ? JSON.parse(cart) : [];
 }
 
+/* SAVE CART */
 function saveCart(cart) {
   sessionStorage.setItem("cart", JSON.stringify(cart));
 }
 
+/* DISPLAY CART */
 function displayCart() {
   if (!cartCount || !cartItems) return;
 
@@ -75,6 +78,7 @@ if (processOrderBtn) {
   });
 }
 
+/* LOAD CART ON PAGE LOAD */
 displayCart();
 
 
@@ -88,16 +92,17 @@ const orderInput = document.getElementById("order");
 const formMessage = document.getElementById("formMessage");
 const clearOrderBtn = document.getElementById("clearOrderBtn");
 
+/* LOAD SAVED CONTACT DATA */
 if (contactForm) {
-
-  /* Load saved data */
   window.addEventListener("load", function () {
-    nameInput.value = localStorage.getItem("customerName") || "";
-    emailInput.value = localStorage.getItem("customerEmail") || "";
-    orderInput.value = localStorage.getItem("customerOrder") || "";
+    if (nameInput && emailInput && orderInput) {
+      nameInput.value = localStorage.getItem("customerName") || "";
+      emailInput.value = localStorage.getItem("customerEmail") || "";
+      orderInput.value = localStorage.getItem("customerOrder") || "";
+    }
   });
 
-  /* Submit form */
+  /* SUBMIT CONTACT FORM */
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -106,11 +111,13 @@ if (contactForm) {
     localStorage.setItem("customerOrder", orderInput.value);
 
     alert("Your order has been saved.");
-    formMessage.textContent = "Your order information has been saved.";
+    if (formMessage) {
+      formMessage.textContent = "Your order information has been saved.";
+    }
   });
 }
 
-/* Clear saved order */
+/* CLEAR SAVED ORDER */
 if (clearOrderBtn) {
   clearOrderBtn.addEventListener("click", function() {
 
@@ -118,19 +125,26 @@ if (clearOrderBtn) {
     localStorage.removeItem("customerEmail");
     localStorage.removeItem("customerOrder");
 
-    nameInput.value = "";
-    emailInput.value = "";
-    orderInput.value = "";
+    if (nameInput && emailInput && orderInput) {
+      nameInput.value = "";
+      emailInput.value = "";
+      orderInput.value = "";
+    }
 
     alert("Your saved order has been cleared.");
-    formMessage.textContent = "Saved order has been cleared.";
+    if (formMessage) {
+      formMessage.textContent = "Saved order has been cleared.";
+    }
   });
+}
+
 
 /* =========================
    NEWSLETTER SUBSCRIBE
 ========================= */
 const newsletterForm = document.getElementById("newsletterForm");
 
+/* SUBSCRIBE FORM */
 if (newsletterForm) {
   newsletterForm.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -139,6 +153,4 @@ if (newsletterForm) {
 
     newsletterForm.reset();
   });
-}
-
 }
